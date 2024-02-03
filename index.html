@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Pass</title>
+    <style>
+        .box{
+            width: 30%;
+            height: 60vh;
+            background-color: cornflowerblue;
+            display: flex;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .heading{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 25px;
+        }
+        .paragraph{
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .btn{
+            width: 100%;
+            height: 10vh;
+            background-color: white;
+            color: red;
+            border: none;
+            border-radius: 5px;
+        }
+        .Dbtn{
+            width: 10%;
+            height: 10vh;
+            background-color: black;
+            color: white;
+            border: none;
+            position: relative;
+            left: 350px;
+        }
+    </style>
+</head>
+<body>
+    <!-- show password code -->
+    <!-- <input type="password"  id="pass">
+    <i class="fa fa-eye" aria-hidden="true" onclick="showPass()" id="eye"></i> -->
+
+    <i class="fa fa-sun-o" id="chg" aria-hidden="true" onclick="darkMode()"></i>
+        <button class="Dbtn"  id="dBtn">Dark Mode</button>
+        <div class="box" id="box">
+            <h1 class="heading" id="head">NIKE</h1>
+            <p class="paragraph" id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas beatae fuga maxime.</p>
+            <input type="button" id="btn" value="Learn More" class="btn">
+        </div>
+
+
+
+    <script src="./function.js"></script>
+    <script src="./icons.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .slider-wrapper {
+        overflow: hidden;
+        position: relative;
+      }
+
+      .slider-wrapper img {
+        width: 100%;
+        height: 400px; /* Adjust height as needed */
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: opacity 0.5s ease;
+      }
+      .slider-wrapper img:not(:first-child) {
+        opacity: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slider-container">
+      <!-- <button onclick="changeSlide(-1)">Previous</button> -->
+
+      <div class="slider-wrapper">
+        <img
+          src="../../Downloads/christopher-gower-vjMgqUkS8q8-unsplash.jpg"
+          alt="Slide 1"
+        />
+        <img
+          src="../../Downloads/elisa-calvet-b-S3nUOqDmUvc-unsplash.jpg"
+          alt="Slide 2"
+        />
+        <img
+          src="../../Downloads/ivan-aleksic-PDRFeeDniCk-unsplash.jpg"
+          alt="Slide 3"
+        />
+      </div>
+      <!-- <button onclick="changeSlide(1)">Next</button> -->
+    </div>
+
+    <script>
+      const images = document.querySelectorAll(".slider-wrapper img");
+      const currentImg = 0;
+
+      function changeSlide(n) {
+        images.forEach((image, index) => {
+          image.style.opacity = index === currentImg + n ? 1 : 0;
+        });
+        currentImg = (currentImg + n) % images.length;
+      }
+      setInterval(() => {
+        changeSlide(1);
+      }, 3000); // Change slide every 3 seconds
+    </script>
+  </body>
+</html>
